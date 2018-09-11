@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ViewModel
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">bright_idea</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Ideas"></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Logout"></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container" style="width: 60%;">
+    <form asp-controller="Home" asp-action="Login" method="post">
+        <div class="form-group">    
+        Email:   <span style="color:red;" asp-validation-for="loginUser.LogEmail"></span>  <input class="form-control"  asp-for="loginUser.LogEmail" placeholder="...limited to 255 characters"></textarea>    
+        Password: <span style="color:red;" asp-validation-for="loginUser.LogPassword"></span><input type="password" asp-for="loginUser.LogPassword" class="form-control">    
+        <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="container" style="width: 60%;">
+    <form asp-area="" asp-controller="Home" asp-action="Create" method="post">
+        <div class="form-group">
+            Name: <span style="color:red;" asp-validation-for="regUser.Name" ></span><input class="form-control" type="text" asp-for="regUser.Name" placeholder="...min 2 letters, alpha only">
+            
+            Alias: <span style="color:red;" asp-validation-for="regUser.Alias"></span><input class="form-control"type="text" asp-for="regUser.Alias" placeholder="...min 2 letters, alpha only">
+            
+            Email:   <span style="color:red;" asp-validation-for="regUser.Email"></span>  <input class="form-control" asp-for="regUser.Email" placeholder="...limited to 255 characters"></textarea>
+            
+            Password: <span style="color:red;" asp-validation-for="regUser.Password"></span><input type="password" asp-for="regUser.Password" class="form-control">
+
+            Password Confirm: <span style="color:red;" asp-validation-for="regUser.ConfirmPassword"></span><input type="password" asp-for="regUser.ConfirmPassword" class="form-control">
+            
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

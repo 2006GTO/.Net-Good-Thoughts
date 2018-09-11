@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Hello";
+}
+<h2>@ViewData["Title"] @ViewBag.name</h2>
+@model ViewModel
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">bright_idea</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Ideas"></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">bright_idea</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+ 
+                    <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<form asp-controller="Home" asp-action="New" method="post">
+        <div class="form-group">    
+        <span style="color:red;" asp-validation-for="Idea.Text"></span><textarea class="form-control"  asp-for="Idea.Text" placeholder="Post your idea here...limited to 255 characters"></textarea>
+        <button type="submit" class="btn btn-success">Idea!</button>
+        </div>
+    </form>
+
+<table class="table">
+<tbody>
+    @foreach(var i in ViewBag.ideas){
+    <tr>
+        <td><a href="/UserShow/@i.Userid">@i.Creator.Name</a></td>
+        <td>@i.Text</td>
+        <td><a href="AllLiked/@i.Ideaid">@i.Likes.Count People like this.</a></td>  @if(ViewBag.id == @i.Userid){
+            <td>You posted this...<a href="Delete/@i.Ideaid/ideas">Delete</a></td>
+        }
+        else{ 
+            int Count = 0;
+            @foreach(var j in @i.Likes){
+                @if(@j.Userid == ViewBag.id){
+                    Count = 1;
+                }
+            }
+            if(Count == 1){
+                <td>You liked this!!!</td>
+            }
+            else {
+                <td><a href="Like/@i.Ideaid/ideas" value="@TempData["ideas"]">Like!!!</a></td>
+            }
+        }
+    </tr>
+        }
+</tbody>
+</table>
+
+
+

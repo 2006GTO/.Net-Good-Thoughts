@@ -1,0 +1,30 @@
+@model ViewModel
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">bright_idea</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Ideas">Ideas</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<h2>Welcome!</h2>
+
+<p>Name: @ViewBag.user.Name</p> 
+<p>Alias: @ViewBag.user.Alias</p> 
+<p>Email: @ViewBag.user.Email</p> 
+
+<p>Total # of Likes: @ViewBag.userlikes</p>
+<p>Total # of Posts: @ViewBag.userposts</p>
+

@@ -1,0 +1,11 @@
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\obj\Debug\netcoreapp2.0\bright_idea.csprojAssemblyReference.cache
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\obj\Debug\netcoreapp2.0\bright_idea.csproj.CoreCompileInputs.cache
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\obj\Debug\netcoreapp2.0\bright_idea.AssemblyInfoInputs.cache
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\obj\Debug\netcoreapp2.0\bright_idea.AssemblyInfo.cs
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\bin\Debug\netcoreapp2.0\bright_idea.deps.json
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\bin\Debug\netcoreapp2.0\bright_idea.runtimeconfig.json
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\bin\Debug\netcoreapp2.0\bright_idea.runtimeconfig.dev.json
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\bin\Debug\netcoreapp2.0\bright_idea.dll
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\bin\Debug\netcoreapp2.0\bright_idea.pdb
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\obj\Debug\netcoreapp2.0\bright_idea.dll
+C:\Users\WhiteyBear\Desktop\Bootcamp\Tom_Reese\C_Sharp\bright_idea\obj\Debug\netcoreapp2.0\bright_idea.pdb
